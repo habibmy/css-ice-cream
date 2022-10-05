@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div id="a">
+        <div id="strip"></div>
+      </div>
+      <div id="b">
+        <div id="c">XYZ</div>
+      </div>
+
+      <div id="text">Ice Cream</div>
+    </div>
+  </body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: rgb(65, 184, 65);
+      display: grid;
+      place-content: center;
+      height: 100vh;
+    }
+
+    #a {
+      width: 150px;
+      height: 280px;
+      background-color: rgb(147 70 14);
+      border-radius: 55px 40px 40px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #a::after {
+      content: "";
+      width: 200px;
+      height: 80px;
+      position: absolute;
+      background-color: white;
+      transform: rotate(-37deg);
+      translate: -60px -20px;
+    }
+
+    #b {
+      width: 30px;
+      height: 80px;
+      background-color: rgb(233, 208, 162);
+      margin: auto;
+      border-radius: 0 0 30px 30px;
+      display: grid;
+      place-content: center;
+    }
+
+    #c {
+      transform: rotate(90deg);
+      font-family: sans-serif;
+    }
+
+    #strip {
+      position: absolute;
+      width: 5px;
+      height: 220px;
+      background-color: rgb(97, 52, 20);
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    #strip::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 150px;
+      background-color: rgb(97, 52, 20);
+      right: 37px;
+      bottom: 0;
+    }
+    #strip::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 150px;
+      background-color: rgb(97, 52, 20);
+      left: 37px;
+      bottom: 0;
+    }
+
+    #text {
+      position: absolute;
+      color: white;
+      font-size: 50px;
+      font-family: sans-serif;
+      font-weight: 700;
+      right: 0;
+      margin: auto;
+      left: 0;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</html>
