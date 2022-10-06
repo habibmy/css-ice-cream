@@ -7,6 +7,9 @@
     <title>Document</title>
   </head>
   <body>
+    <button id="btn" onclick="changeToStrawberry()">
+      Change to Strawberry
+    </button>
     <div>
       <div id="a">
         <div id="strip"></div>
@@ -16,7 +19,6 @@
       </div>
 
       <div id="text">Ice Cream</div>
-      <button id="btn" onclick="changeToStrawberry()">Change Flavour</button>
     </div>
     <script>
       const changeToStrawberry = () => {
@@ -116,6 +118,20 @@
       background-color: var(--strip-backgroundcolor);
       left: 37px;
       bottom: 0;
+    }
+
+    #btn {
+      padding: 10px 20px;
+      background-color: royalblue;
+      border: none;
+      color: white;
+      border-radius: 10px;
+      left: 0;
+      right: 0;
+      top: 20px;
+      margin: auto;
+      position: absolute;
+      max-width: 200px;
     }
 
     #text {
