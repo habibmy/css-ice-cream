@@ -16,12 +16,25 @@
       </div>
 
       <div id="text">Ice Cream</div>
+      <button id="btn" onclick="changeFlavour()">Change Flavour</button>
     </div>
+    <script>
+      const changeFlavour = () => {
+        const root = document.querySelector(":root");
+        root.style.setProperty("--ice-cream-backgroundcolor", "#fdc2c8");
+        root.style.setProperty("--strip-backgroundcolor", "#eb737c");
+      };
+    </script>
   </body>
   <style>
     * {
       margin: 0;
       padding: 0;
+    }
+
+    :root {
+      --ice-cream-backgroundcolor: rgb(147 70 14);
+      --strip-backgroundcolor: rgb(97, 52, 20);
     }
 
     body {
@@ -34,7 +47,7 @@
     #a {
       width: 150px;
       height: 280px;
-      background-color: rgb(147 70 14);
+      background-color: var(--ice-cream-backgroundcolor);
       border-radius: 55px 40px 40px 40px;
       position: relative;
       overflow: hidden;
@@ -70,7 +83,7 @@
       position: absolute;
       width: 5px;
       height: 220px;
-      background-color: rgb(97, 52, 20);
+      background-color: var(--strip-backgroundcolor);
       left: 0;
       right: 0;
       margin: auto;
@@ -81,7 +94,7 @@
       position: absolute;
       width: 5px;
       height: 150px;
-      background-color: rgb(97, 52, 20);
+      background-color: var(--strip-backgroundcolor);
       right: 37px;
       bottom: 0;
     }
@@ -90,7 +103,7 @@
       position: absolute;
       width: 5px;
       height: 150px;
-      background-color: rgb(97, 52, 20);
+      background-color: var(--strip-backgroundcolor);
       left: 37px;
       bottom: 0;
     }
